@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    
+}
+:root{
+    --container-bg-color:hsl(235, 21%, 11%);
+    --card-bg-color:hsl(235, 24%, 19%);
+    --text-color: hsl(234, 39%, 85%);
+    --placeholder-color:hsl(234, 11%, 52%);
+    --footer-color:hsl(234, 11%, 52%);
+    --circle-color:hsl(233, 14%, 35%);
+    --border-color:hsl(234, 11%, 52%);
+}
+[data-theme = "light"]{
+    --container-bg-color:hsl(0, 0%, 93%);
+    --card-bg-color:hsl(0, 0%, 100%);
+    --text-color: hsl(235, 19%, 35%);
+    --placeholder-color:hsl(236, 9%, 61%);
+    --footer-color:hsl(236, 9%, 61%);
+    --circle-color:hsl(233, 11%, 84%);
+    --border-color:hsl(0, 0%, 90%);
+}
+.head img{
+    width: 100%;
+    height: 220px;
+}
+.container{
+    height: 559px;
+    width: 100%;
+    background-color: var(--container-bg-color);
+    margin-top: -5px;
+    transition: background-color 1s ease, color 1s ease;
+}
+.main{
+    width: 500px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    margin-top: -170px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.title p{
+    color: hsl(0, 0%, 100%);
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+.title img{
+    width: auto;
+    height: 25px;
+}
+#light{
+    display: block;
+}
+#dark{
+    display: none;
+}
+.input-heading{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.myinput[type="checkbox"] {
+    appearance: none;
+}
+.myinput[type="checkbox"]::after {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 3px  15px 0 10px;
+    border: 1px solid   var(--circle-color);
+    border-radius: 50%;
+    content: "";
+    background-color: var(--card-bg-color);
+}
+.myinput[type='checkbox']:hover::after{
+    border-color: hsl(280, 87%, 65%)hsl(192, 100%, 67%) hsl(193, 23%, 69%);
+}
+#todo-input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--card-bg-color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: var(--text-color);
+}
+#todo-input::placeholder{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: var(--placeholder-color);
+}
+.task-section{
+    width: 100%;
+    height: auto;
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+}
+.tasks{
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+#task-check[type='checkbox']{
+    appearance: none;
+}
+#task-check[type='checkbox']::after{
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 3px  15px 0 10px;
+    border: 1px solid   var(--circle-color);
+    border-radius: 50%;
+    content: "";
+    background-color: var(--card-bg-color);
+}
+#task-check[type="checkbox"]:checked:after {
+    background-image: url(./images/icon-check.svg), linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#task-check[type='checkbox']:hover::after{
+    border-color: hsl(280, 87%, 65%)hsl(192, 100%, 67%) hsl(193, 23%, 69%);
+}
+.answer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--text-color);
+    margin-right: 10px;
+    align-items: center;
+}
+#close{
+    width: 15px;
+    height: 15px;
+}
+.record{
+    display: flex;
+    justify-content: space-between;
+    color: var(--footer-color);
+    font-size: 14px;
+    height: 50px;
+    align-items: center;
+    margin:0 20px;
+    font-weight: 700;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: auto;
+}
+#all{
+    color: hsl(220, 98%, 61%);
+}
+#drag{
+    color:  var(--footer-color);
+    font-size: 14px;
+    text-align: center;
+    margin: 50px 0 0  0;
+}
+.attribution {
+    background-color: var(--container-bg-color);
+     font-size: 12px; 
+     text-align: center;
+     color: var(--text-color); 
+    margin-top: -1px;
+}
+.attribution a {  color: var(--text-color); }
+
+
+@media screen and (max-width:600px) {
+    .main{
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .main{
+        width: 350px;
+    }
+    .list{
+        position: absolute;
+        bottom: 50px ;
+        left: 1px;
+        width: 350px;
+        height: 50px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: var(--card-bg-color);
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        margin: auto;
+    }
+    #drag{
+        margin: 100px 0 0 0;
+    }
+
+} 
+
+
+@media screen and (max-width:400px) {
+    .main{
+        width: 300px;
+    }
+    .list{
+        width: 300px;
+    }
+}
