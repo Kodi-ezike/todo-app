@@ -76,11 +76,11 @@ body{
 }
 .myinput[type="checkbox"] {
     appearance: none;
+    outline: none;
 }
 .myinput[type="checkbox"]::after {
     position: relative;
     display: block;
-    outline: none;
     width: 20px;
     height: 20px;
     margin: 3px  15px 0 10px;
@@ -120,11 +120,11 @@ body{
 }
 #task-check[type='checkbox']{
     appearance: none;
+    outline: none;
 }
 #task-check[type='checkbox']::after{
     position: relative;
     display: block;
-    outline: none;
     width: 20px;
     height: 20px;
     margin: 3px  15px 0 10px;
