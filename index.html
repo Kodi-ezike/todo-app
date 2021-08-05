@@ -15,46 +15,44 @@
   <div class="container">
     <div class="main">
 
-          <div class="title">
-            <p class="todo">TODO</p>
-            <img src="./images/icon-moon.svg" alt="moon"id="dark" onclick="darkMode()" >
-            <img src="./images/icon-sun.svg" alt="sun" id="light"onclick="lightMode()">
-          </div>
+      <div class="title">
+        <p class="todo">TODO</p>
+        <img src="./images/icon-moon.svg" alt="moon"id="dark" onclick="darkMode()" >
+        <img src="./images/icon-sun.svg" alt="sun" id="light"onclick="lightMode()">
+      </div>
 
-          <div class="input-heading">
-            <input type="checkbox"  class="myinput">
-          <input type="text" id="todo-input" placeholder="Create a new todo...">
-          </div>
-          <!-- Add dynamic number --> 
-          <div class="task-section">
+      <form class="input-heading">
+        <input type="checkbox"  class="myinput">
+      <input type="text" id="todo-input" placeholder="Create a new todo...">
+      </form>
+  
+      <ul class="task-section">
 
-            <div class="tasks">
-              <input type="checkbox" id="task-check">
-              <div class="answer">
-                <p id="task-result">answer</p>
-                <img src="./images/icon-cross.svg" alt="cross" id="close">
-              </div>
-             
-             
+        <!-- <li class="new-task">
+          <input type="checkbox" id="task-check" name="task-check">
+          <label for="check-task"></label>
+          <p id="task-result">answer</p>
+          <span id="close-icon"><img src="./images/icon-cross.svg" alt="cross" id="close"></span>
+        </li> -->
+
+      </ul>
+        <div class="record">
+          <p class="remainder" id="remainder"><span class="pendingNumber">0</span> items left</p>
+
+          <div class="list">
+            <div class="wrapper">
+              <p id="all">All</p>
+              <p id="active">Active</p>
+              <p id="complete">Completed</p>
             </div>
-
-            <div class="record">
-              <p class="remainder" id="remainder">0 items left</p>
-
-              <div class="list">
-                <div class="wrapper">
-                  <p id="all">All</p>
-                  <p id="active">Active</p>
-                  <p id="complete">Completed</p>
-                </div>
-               
-              </div>
-
-              <p class="clear" id="clear"> Clear Completed</p>
-            </div>
+            
           </div>
-         
-          <p id="drag"> Drag and drop to reorder list</p>
+
+          <p class="clear" id="clear"> Clear Completed</p>
+        </div>
+      
+      
+      <p id="drag"> Drag and drop to reorder list</p>
          
 
     </div>
