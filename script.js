@@ -37,7 +37,7 @@ inputBox.addEventListener("keyup", function(event) {
    
     if (event.code === 'Enter') {
         event.preventDefault();
-        document.querySelector('.input-heading').submit();
+        //document.querySelector('.input-heading').submit();
         let userEnteredValue = inputBox.value; //getting input field value
         let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
         if(getLocalStorageData == null){ //if localstorage has no data
