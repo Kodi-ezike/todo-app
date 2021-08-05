@@ -79,20 +79,20 @@ function show(){
     todoList.innerHTML = newLiTag;
 }
 
-function selectTask(index){
-    let getLocalStorageData = localStorage.getItem("New Todo");
-    listArray = JSON.parse(getLocalStorageData);
-    listArray.valueOf(index); //delete or remove the li
-    pendingTasksNumb = listArray.length;
-    //localStorage.setItem("New Todo", JSON.stringify(listArray));
-    show(); //call the showTasks function
-}
+// function selectTask(index){
+//     let getLocalStorageData = localStorage.getItem("New Todo");
+//     listArray = JSON.parse(getLocalStorageData);
+//     listArray.valueOf(index); //delete or remove the li
+//     pendingTasksNumb = listArray.length;
+//     //localStorage.setItem("New Todo", JSON.stringify(listArray));
+//     show(); //call the showTasks function
+// }
 
-function deleteTask(index){
-    let getLocalStorageData = localStorage.getItem("New Todo");
-    listArray = JSON.parse(getLocalStorageData);
-    listArray.splice(index, 1); //delete or remove the li
-    localStorage.setItem("New Todo", JSON.stringify(listArray));
-    show(); //call the showTasks function
-}
+// function deleteTask(index){
+//     let getLocalStorageData = localStorage.getItem("New Todo");
+//     listArray = JSON.parse(getLocalStorageData);
+//     listArray.splice(index, 1); //delete or remove the li
+//     localStorage.setItem("New Todo", JSON.stringify(listArray));
+//     show(); //call the showTasks function
+// }
 
