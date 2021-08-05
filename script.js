@@ -67,16 +67,16 @@ function show(){
         listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
     }
     
-    let newList = '';
+    let newLiTag = '';
     listArray.forEach((element, index) => {
-        newList += `<li class="new-task">
+        newLiTag += `<li class="new-task">
         <input type="checkbox" id="task-check" name="task-check" onclick="selectTask(${index})" >
         <label for="check-task"></label>
         <p id="task-result">${element}</p>
         <span id="close-icon" onclick="deleteTask(${index})" ><img src="./images/icon-cross.svg" alt="cross" id="close"></span>
       </li>`;
     });
-    todoList.innerHTML = newList;
+    todoList.innerHTML = newLiTag;
 }
 
 function selectTask(index){
