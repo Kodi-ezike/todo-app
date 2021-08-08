@@ -35,7 +35,7 @@ const pendingTasksNumb = document.querySelector(".pendingNumber");
 
 inputBox.addEventListener("keyup", function(event) {
    
-    if (event.code === 'Enter') {
+    if (event.keyCode === 13) {
         //event.preventDefault();
         //document.querySelector('.input-heading').submit();
         let userEnteredValue = inputBox.value; //getting input field value
